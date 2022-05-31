@@ -86,7 +86,8 @@ h2 {
 p,
 ol,
 .open ol,
-.client__detail {
+.client__detail,
+footer {
   font-family: "Barlow", sans-serif;
 }
 
@@ -393,4 +394,37 @@ section {
   .testimonial {
     margin: 6em auto;
   }
+}
+
+/* Footer */
+footer {
+  padding: 6rem 0;
+  color: var(--text-graphic);
+  background-color: var(--bg-footer);
+}
+
+svg path {
+  fill: var(--text-graphic);
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  padding: 0;
+}
+
+footer div {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 6rem;
+}
+
+footer li:hover {
+  color: var(--color-primary);
+}
+
+footer div svg path:hover {
+  fill: var(--color-primary);
 }
