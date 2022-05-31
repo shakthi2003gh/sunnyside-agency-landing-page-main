@@ -11,6 +11,14 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  min-width: 375px;
+}
+
+div img {
+  max-width: 100%;
+}
+
 /* Color palette */
 :root {
   --bg-soft-red: hsl(7, 99%, 70%);
@@ -22,15 +30,172 @@ html {
 
   --color-primary: hsl(0, 0%, 100%);
   --color-secondary: hsl(212, 27%, 19%);
-  --color-accent: hsl(213, 9%, 39%);
+  --color-accent: hsl(232, 10%, 55%);
 
-  --color-: hsl(232, 10%, 55%);
+  --color-: hsl(213, 9%, 39%);
   --color-: hsl(210, 4%, 67%);
 }
 
 /* Typography */
 body {
   font-size: 1.8rem;
+  font-family: "Fraunces", serif;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+h1 {
+  color: var(--color-primary);
+  font-size: 4rem;
+  letter-spacing: 0.2em;
+  margin: 0.6em 0 1.5em;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: var(--color-secondary);
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin: 1.5em 1.1em 3rem;
+}
+
+p,
+ol,
+.open ol {
   font-family: "Barlow", sans-serif;
-  /* font-family: "Fraunces", serif; */
+}
+
+.open ol {
+  color: var(--color-accent);
+  background-color: var(--color-primary);
+}
+
+.active {
+  font-family: "Fraunces", serif;
+  font-size: 0.8em;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  background-color: var(--bg-yellow);
+  padding: 1em 1.8em;
+  border-radius: 100px;
+  opacity: 1;
+}
+
+.active:hover {
+  color: var(--bg-yellow);
+  background-color: black;
+}
+
+@media screen and (min-width: 600px) {
+  .open ol {
+    color: var(--color-primary);
+    background-color: transparent;
+  }
+
+  .active {
+    color: black;
+    background-color: var(--color-primary);
+  }
+
+  .active:hover {
+    color: var(--color-primary);
+    background-color: hsla(0, 0%, 100%, 0.403);
+  }
+}
+
+/* header */
+nav {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 0;
+  right: 0;
+  padding: 1.5em 1.2em;
+}
+
+.hamburger-menu {
+  width: 25px;
+  height: 20px;
+}
+
+ol {
+  color: var(--color-primary);
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+.open ol {
+  position: absolute;
+  top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  gap: 1.5em;
+  padding: 1.8em;
+}
+
+.open ol::before {
+  position: absolute;
+  content: "";
+  border: 3rem solid transparent;
+
+  border-right: 3rem solid var(--color-primary);
+  top: -3rem;
+  right: 0;
+}
+
+li {
+  list-style: none;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+li:hover {
+  opacity: 1;
+}
+
+.hero {
+  background: url(/images/mobile/image-header.jpg) no-repeat center;
+  background-size: cover;
+  height: 80vh;
+  max-height: 600px;
+  display: grid;
+  place-content: center;
+  place-items: center;
+}
+
+@media screen and (min-width: 600px) {
+  nav {
+    padding: 1.5em 2.2em;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  ol,
+  .open ol {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    padding: 0;
+    gap: 2em;
+  }
+
+  .open ol::before {
+    border-right: none;
+  }
+
+  .hero {
+    background-image: url(/images/desktop/image-header.jpg);
+  }
 }
