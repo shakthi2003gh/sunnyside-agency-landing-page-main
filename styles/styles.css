@@ -1,1 +1,36 @@
 @import url(/styles/normalize.css);
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Color palette */
+:root {
+  --bg-soft-red: hsl(7, 99%, 70%);
+  --bg-yellow: hsl(51, 100%, 49%);
+  --bg-footer: hsl(168, 34%, 41%);
+
+  --text-photography: hsl(198, 62%, 26%);
+  --text-graphic: hsl(167, 40%, 24%);
+
+  --color-primary: hsl(0, 0%, 100%);
+  --color-secondary: hsl(212, 27%, 19%);
+  --color-accent: hsl(213, 9%, 39%);
+
+  --color-: hsl(232, 10%, 55%);
+  --color-: hsl(210, 4%, 67%);
+}
+
+/* Typography */
+body {
+  font-size: 1.8rem;
+  font-family: "Barlow", sans-serif;
+  /* font-family: "Fraunces", serif; */
+}
