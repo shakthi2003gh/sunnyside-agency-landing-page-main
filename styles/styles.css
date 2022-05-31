@@ -340,11 +340,13 @@ section {
   .graphic-section {
     background: url(/images/desktop/image-graphic-design.jpg) no-repeat center;
     background-size: cover;
+    max-height: 80%;
   }
 
   .photography-section {
     background: url(/images/desktop/image-photography.jpg) no-repeat center;
     background-size: cover;
+    max-height: 80%;
   }
 }
 
